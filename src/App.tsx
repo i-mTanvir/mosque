@@ -4,7 +4,6 @@ import { CommunitySection } from './sections/CommunitySection'
 import { FeatureSection } from './sections/FeatureSection'
 import { HeroSection } from './sections/HeroSection'
 import { PillarsSection } from './sections/PillarsSection'
-import { PrayerTimesSection } from './sections/PrayerTimesSection'
 import { SiteFooter } from './components/layout/SiteFooter'
 import { ServicesSection } from './sections/ServicesSection'
 import { SupportSection } from './sections/SupportSection'
@@ -18,7 +17,6 @@ function App() {
         <HeroSection />
         <FeatureSection />
         <WelcomeSection />
-        <PrayerTimesSection />
         <SupportSection />
         <ServicesSection />
         <PillarsSection />

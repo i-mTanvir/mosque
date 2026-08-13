@@ -17,12 +17,6 @@ export const navigationItems: NavigationItem[] = [
   { href: '#contact', label: 'Contact' },
 ]
 
-export interface PrayerTime {
-  name: string
-  begins: string
-  iqamah: string
-}
-
 export interface StatItem {
   value: string
   label: string
@@ -33,54 +27,6 @@ export interface FooterDetail {
   label: string
   value: string
 }
-
-export const welcomeHighlights: FeatureItem[] = [
-  {
-    icon: '01',
-    title: 'Our Vision',
-    description:
-      'We build a welcoming place for salah, reflection, and service rooted in mercy and sincerity.',
-  },
-  {
-    icon: '02',
-    title: 'Our Mission',
-    description:
-      'We nurture hearts through learning, support local families, and strengthen community bonds.',
-  },
-]
-
-export const prayerTimes: PrayerTime[] = [
-  {
-    name: 'Fajr',
-    begins: 'Begins 5:37 AM',
-    iqamah: 'Iqamah 6:45 AM',
-  },
-  {
-    name: 'Zuhr',
-    begins: 'Begins 1:07 PM',
-    iqamah: 'Iqamah 1:30 PM',
-  },
-  {
-    name: 'Asr',
-    begins: 'Begins 5:08 PM',
-    iqamah: 'Iqamah 5:45 PM',
-  },
-  {
-    name: 'Maghrib',
-    begins: 'Begins 6:28 PM',
-    iqamah: 'Iqamah 6:32 PM',
-  },
-  {
-    name: 'Isha',
-    begins: 'Begins 8:19 PM',
-    iqamah: 'Iqamah 8:30 PM',
-  },
-  {
-    name: 'Jummah',
-    begins: 'Begins 1:20 PM',
-    iqamah: 'Iqamah 1:30 PM',
-  },
-]
 
 export const services: FeatureItem[] = [
   {
