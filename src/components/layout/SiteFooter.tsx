@@ -3,35 +3,53 @@ import { contactDetails, footerLinks } from '../../data/site'
 export function SiteFooter() {
   return (
     <footer className="site-footer" id="contact">
+      <div className="site-footer__cta">
+        <div className="site-footer__cta-icon" aria-hidden="true">
+          <span className="site-footer__cta-moon" />
+          <span className="site-footer__cta-person" />
+        </div>
+        <div className="site-footer__cta-copy">
+          <p>Become a Part of Our Community</p>
+          <h2>Inspired? Join Us Right Now!</h2>
+        </div>
+        <a className="button button--gold site-footer__cta-button" href="#contact">
+          Join Community
+        </a>
+      </div>
+
+      <div className="site-footer__divider" />
+
       <div className="site-footer__grid">
         <div className="site-footer__brand-block">
-          <div className="brand-badge brand-badge--footer">
-            <span>AN</span>
-          </div>
-          <p>
-            Masjid is a spiritual home built for prayer, learning, charity, and
-            gathering together as one community.
-          </p>
+          <img
+            className="site-footer__logo"
+            src="/media/footer-logo.png"
+            alt="An Nur footer logo"
+          />
         </div>
-        <div>
+        <div className="site-footer__info-block">
           <h3>Information</h3>
           <p>
-            We also welcome families, students, and visitors through weekly circles,
-            Quran learning, and community support.
+            Elit duis volutpat ligula nulla a getmolestie mi consectetur auctor
+            ugue ac tincidunt, var ius felis et, augue lorem. Aliquam accumsan
+            fringilla.
           </p>
         </div>
-        <div>
+        <div className="site-footer__contact-block">
           <h3>Contact Info</h3>
           <ul className="site-footer__list">
             {contactDetails.map((detail) => (
               <li key={detail.label}>
-                <span>{detail.label}</span>
-                <strong>{detail.value}</strong>
+                <span className="site-footer__contact-icon">{detail.icon}</span>
+                <div>
+                  <strong>{detail.label}: {detail.value}</strong>
+                  {detail.note ? <span>{detail.note}</span> : null}
+                </div>
               </li>
             ))}
           </ul>
         </div>
-        <div>
+        <div className="site-footer__links-block">
           <h3>Quick Links</h3>
           <ul className="site-footer__links">
             {footerLinks.map((link) => (
@@ -42,13 +60,18 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
+
+      <div className="site-footer__divider" />
+
       <div className="site-footer__bottom">
-        <p>Masjid Copyright 2026. All rights reserved.</p>
+        <p>
+          Muezzin © Copyright 2026, <span>All Rights Reserved</span>
+        </p>
         <div className="site-footer__socials" aria-label="Social links">
-          <a href="#facebook">Fb</a>
-          <a href="#twitter">Tw</a>
-          <a href="#linkedin">In</a>
-          <a href="#youtube">Yt</a>
+          <a href="#facebook">f</a>
+          <a href="#twitter">t</a>
+          <a href="#linkedin">in</a>
+          <a href="#instagram">ig</a>
         </div>
       </div>
     </footer>
