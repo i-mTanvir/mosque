@@ -827,39 +827,15 @@ main {
   margin-bottom: 2rem;
 }
 
-.pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.pillar-card {
+.pillars-section__image-wrap {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 24rem;
-  padding: 1.75rem 1rem 1.5rem;
-  text-align: center;
-  background: linear-gradient(180deg, #fff8df, #f7e9b4);
-  clip-path: polygon(50% 0, 80% 10%, 100% 35%, 100% 65%, 80% 90%, 50% 100%, 20% 90%, 0 65%, 0 35%, 20% 10%);
+  justify-content: center;
 }
 
-.pillar-card__number {
-  margin-bottom: 1rem;
-  font-family: var(--font-display);
-  font-size: 1.7rem;
-  color: var(--gold-strong);
-}
-
-.pillar-card__orb {
-  width: 4.6rem;
-  height: 4.6rem;
-  margin-top: auto;
-  border-radius: 999px;
-  background:
-    radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.95), transparent 30%),
-    linear-gradient(180deg, #ca8a2d, #70420f);
-  box-shadow: inset 0 0 0 0.35rem rgba(255, 248, 223, 0.72);
+.pillars-section__image {
+  display: block;
+  width: min(100%, 70rem);
+  height: auto;
 }
 
 .community-section {
@@ -954,7 +930,6 @@ main {
   }
 
   .services-section__layout,
-  .pillars-grid,
   .site-footer__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -982,7 +957,6 @@ main {
   .services-section__layout,
   .stats-row,
   .pillars-section__intro,
-  .pillars-grid,
   .site-footer__grid,
   .community-section {
     grid-template-columns: 1fr;

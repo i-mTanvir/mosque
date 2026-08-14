@@ -73,34 +73,6 @@ export const stats: StatItem[] = [
   },
 ]
 
-export const pillars: FeatureItem[] = [
-  {
-    icon: '1',
-    title: 'Shahadah',
-    description: 'To believe in one God and that Muhammad is His messenger.',
-  },
-  {
-    icon: '2',
-    title: 'Salah',
-    description: 'To establish the five daily prayers with sincerity and devotion.',
-  },
-  {
-    icon: '3',
-    title: 'Sawm',
-    description: 'To fast in Ramadan with discipline, gratitude, and patience.',
-  },
-  {
-    icon: '4',
-    title: 'Zakat',
-    description: 'To purify wealth by giving to those in need and strengthening justice.',
-  },
-  {
-    icon: '5',
-    title: 'Hajj',
-    description: 'To journey to Makkah for pilgrimage when able and prepared.',
-  },
-]
-
 export const contactDetails: FooterDetail[] = [
   { label: 'Phone', value: '+880 1555-555-555' },
   { label: 'Email', value: 'support@annurmosque.org' },

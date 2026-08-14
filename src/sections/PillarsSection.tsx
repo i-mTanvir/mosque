@@ -1,5 +1,4 @@
 import { SectionTitle } from '../components/common/SectionTitle'
-import { pillars } from '../data/site'
 
 export function PillarsSection() {
   return (
@@ -15,15 +14,12 @@ export function PillarsSection() {
           keeping the content editable from a single data file.
         </p>
       </div>
-      <div className="pillars-grid">
-        {pillars.map((pillar) => (
-          <article key={pillar.title} className="pillar-card">
-            <div className="pillar-card__number">{pillar.icon}</div>
-            <h3>{pillar.title}</h3>
-            <p>{pillar.description}</p>
-            <div className="pillar-card__orb" aria-hidden="true" />
-          </article>
-        ))}
+      <div className="pillars-section__image-wrap">
+        <img
+          className="pillars-section__image"
+          src="/media/seven.png"
+          alt="Five pillars of Islam visual"
+        />
       </div>
     </section>
   )
