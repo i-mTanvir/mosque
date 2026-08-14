@@ -840,12 +840,33 @@ main {
 }
 
 .site-footer {
+  position: relative;
+  overflow: hidden;
   padding: 2.5rem clamp(1.5rem, 6vw, 4rem) 1.1rem;
-  background:
-    linear-gradient(180deg, rgba(7, 83, 64, 0.8), rgba(7, 83, 64, 0.9)),
-    url('/media/footer-bg.png') center top / 100% auto no-repeat;
   color: rgba(255, 255, 255, 0.82);
   background-color: #075340;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/media/footer-bg.png') center center / 100% 100% no-repeat;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.site-footer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 83, 64, 0.08), rgba(7, 83, 64, 0.14));
+  pointer-events: none;
+}
+
+.site-footer > * {
+  position: relative;
+  z-index: 1;
 }
 
 .site-footer h2,
