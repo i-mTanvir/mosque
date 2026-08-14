@@ -842,9 +842,10 @@ main {
 .site-footer {
   padding: 2.5rem clamp(1.5rem, 6vw, 4rem) 1.1rem;
   background:
-    linear-gradient(180deg, rgba(7, 83, 64, 0.94), rgba(7, 83, 64, 0.96)),
-    url('/media/footer-bg.png') center / cover no-repeat;
+    linear-gradient(180deg, rgba(7, 83, 64, 0.8), rgba(7, 83, 64, 0.9)),
+    url('/media/footer-bg.png') center top / 100% auto no-repeat;
   color: rgba(255, 255, 255, 0.82);
+  background-color: #075340;
 }
 
 .site-footer h2,
@@ -861,56 +862,9 @@ main {
 }
 
 .site-footer__cta-icon {
-  position: relative;
-  width: 3.6rem;
-  height: 3.6rem;
-  flex: 0 0 3.6rem;
-}
-
-.site-footer__cta-moon,
-.site-footer__cta-person {
-  position: absolute;
-  display: block;
-}
-
-.site-footer__cta-moon {
-  inset: 0.1rem 0.55rem 0.55rem 0.1rem;
-  border-radius: 999px;
-  border: 0.42rem solid var(--gold);
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  transform: rotate(-28deg);
-}
-
-.site-footer__cta-person {
-  right: 0.25rem;
-  bottom: 0.25rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 999px;
-  border: 0.18rem solid var(--gold);
-}
-
-.site-footer__cta-person::before,
-.site-footer__cta-person::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 999px;
-  background: var(--gold);
-}
-
-.site-footer__cta-person::before {
-  top: -0.55rem;
-  width: 0.42rem;
-  height: 0.42rem;
-}
-
-.site-footer__cta-person::after {
-  bottom: 0.08rem;
-  width: 0.75rem;
-  height: 0.24rem;
+  flex: 0 0 auto;
+  font-size: 3.25rem;
+  color: var(--gold);
 }
 
 .site-footer__cta-copy p {
@@ -996,8 +950,7 @@ main {
   border-radius: 999px;
   background: var(--gold);
   color: #fff;
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1rem;
 }
 
 .site-footer__list li div {
@@ -1015,20 +968,15 @@ main {
 }
 
 .site-footer__links li {
-  position: relative;
-  padding-left: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
 }
 
-.site-footer__links li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.72rem;
-  width: 0;
-  height: 0;
-  border-top: 0.24rem solid transparent;
-  border-bottom: 0.24rem solid transparent;
-  border-left: 0.34rem solid var(--gold);
+.site-footer__links li svg {
+  flex: 0 0 auto;
+  font-size: 0.9rem;
+  color: var(--gold);
 }
 
 .site-footer__bottom {
@@ -1055,8 +1003,7 @@ main {
   align-items: center;
   justify-content: center;
   min-width: 1.4rem;
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 1rem;
   color: #fff;
 }
 
