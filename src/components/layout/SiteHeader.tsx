@@ -6,7 +6,11 @@ export function SiteHeader() {
       <a className="site-header__brand" href="#top" aria-label="An Nur home">
         <img src="/media/logo.png" alt="An Nur Mosque logo" />
       </a>
-      <nav aria-label="Primary navigation">
+      <nav
+        id="primary-navigation"
+        className="site-header__navigation"
+        aria-label="Primary navigation"
+      >
         <ul className="site-header__nav">
           {navigationItems.map((item) => (
             <li key={item.href}>

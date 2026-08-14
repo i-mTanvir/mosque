@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
 }
 
 body {
@@ -31,6 +32,12 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background: var(--page-background);
+  overflow-x: hidden;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
