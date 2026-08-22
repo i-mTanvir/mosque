@@ -11,9 +11,12 @@ import { WelcomeSection } from './sections/WelcomeSection'
 import { CommitteeSection } from './sections/CommitteeSection'
 import { KhutbaSection } from './sections/KhutbaSection'
 import { KhutbaArchive } from './sections/KhutbaArchive'
+import { SupportPage } from './sections/SupportPage'
+import { DonationPopup } from './components/DonationPopup'
 
 function App() {
   if (window.location.pathname === '/khutba') return <KhutbaArchive />
+  if (window.location.pathname === '/support') return <SupportPage />
   useEffect(() => {
     const hash = window.location.hash
 
@@ -29,7 +32,7 @@ function App() {
   }, [])
 
   return (
-    <div className="site-shell">
+    <div className="site-shell"><DonationPopup />
       <SiteHeader />
       <main>
         <HeroSection />
