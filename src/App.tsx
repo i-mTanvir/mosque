@@ -13,6 +13,7 @@ import { KhutbaSection } from './sections/KhutbaSection'
 import { KhutbaArchive } from './sections/KhutbaArchive'
 import { SupportPage } from './sections/SupportPage'
 import { DonationPopup } from './components/DonationPopup'
+import { HistorySection } from './sections/HistorySection'
 
 function App() {
   if (window.location.pathname === '/khutba') return <KhutbaArchive />
@@ -36,6 +37,7 @@ function App() {
       <SiteHeader />
       <main>
         <HeroSection />
+        <HistorySection />
         <FeatureSection />
         <WelcomeSection />
         <SupportSection />
