@@ -677,7 +677,11 @@ main {
 .donation-popup__close { position:absolute; top:.8rem; right:.9rem; z-index:2; width:2.3rem; height:2.3rem; border:0; border-radius:50%; background:rgba(0,0,0,.35); color:#fff; font-size:1.6rem; cursor:pointer; }
 @keyframes popupIn { from{opacity:0;transform:scale(.94) translateY(20px)} to{opacity:1;transform:none} }
 .support-page__main { background:#fff; min-height:70vh; }
-.support-page__hero { padding:7rem 1.25rem 4rem; text-align:center; color:#fff; background:linear-gradient(135deg,#075340,#0d624b); }
+.support-page__hero { position:relative; overflow:hidden; padding:7rem 1.25rem 4rem; text-align:center; color:#fff; background:#075340; isolation:isolate; }
+.support-page__hero::before { content:''; position:absolute; inset:0; z-index:-2; background-position:center; background-size:cover; background-image:url('/media/hero1.png'); animation:supportHeroImages 20s infinite; }
+.support-page__hero::after { content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(135deg,rgba(7,83,64,.64),rgba(13,98,75,.48)); }
+.support-page__hero > * { position:relative; z-index:1; }
+@keyframes supportHeroImages { 0%,20%{background-image:url('/media/hero1.png')} 25%,45%{background-image:url('/media/hero2.png')} 50%,70%{background-image:url('/media/hero3.png')} 75%,95%{background-image:url('/media/hero4.png')} 100%{background-image:url('/media/hero1.png')} }
 .support-page__hero h1 { max-width:55rem; margin:.5rem auto 1rem; color:#fff; font-size:clamp(2.2rem,5vw,4rem); }
 .support-page__hero p:last-child { color:rgba(255,255,255,.82); }
 .support-page__content { max-width:72rem; margin:auto; padding:5rem 1.25rem 7rem; display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
