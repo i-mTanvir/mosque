@@ -225,21 +225,25 @@ main {
 .feature-section__content h2 {
   color: #fff;
   max-width: 20rem;
-  font-size: clamp(1.45rem, 3vw, 2.35rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.45rem);
   line-height: 1.02;
 }
 
 .feature-section__content p {
   margin-top: 0.7rem;
-  max-width: 16rem;
-  font-size: 0.78rem;
+  max-width: 32rem;
+  font-size: clamp(1.15rem, 2.15vw, 1.7rem);
   font-weight: 600;
-  line-height: 1.45;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.92);
 }
 
 .feature-section__content p span {
   display: block;
+  margin-top: 0.7rem;
+  font-size: 0.62em;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .feature-section__button {
@@ -1445,7 +1449,7 @@ main {
 
   .feature-section__content p {
     max-width: 12rem;
-    font-size: 0.68rem;
+    font-size: 0.9rem;
   }
 
   .feature-section__button {
