@@ -8,6 +8,7 @@ import { PillarsSection } from './sections/PillarsSection'
 import { SiteFooter } from './components/layout/SiteFooter'
 import { SupportSection } from './sections/SupportSection'
 import { WelcomeSection } from './sections/WelcomeSection'
+import { CommitteeSection } from './sections/CommitteeSection'
 
 function App() {
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
         <FeatureSection />
         <WelcomeSection />
         <SupportSection />
+        <CommitteeSection />
         <PillarsSection />
       </main>
       <SiteFooter />
