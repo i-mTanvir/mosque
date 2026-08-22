@@ -12,8 +12,6 @@ export interface FeatureItem {
 export const navigationItems: NavigationItem[] = [
   { href: '#top', label: 'হোম' },
   { href: '#support', label: 'অনুদান' },
-  { href: '#services', label: 'কার্যক্রম' },
-  { href: '#pillars', label: 'ইসলামের স্তম্ভ' },
   { href: '#contact', label: 'যোগাযোগ' },
 ]
 
