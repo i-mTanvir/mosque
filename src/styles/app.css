@@ -779,6 +779,10 @@ main {
     clamp(1.4rem, 2vw, 1.8rem);
   text-align: center;
 }
+.support-section__content { padding-top:clamp(3rem,5vw,5rem); }
+.support-section__card h2 { max-width:80%; text-align:center; letter-spacing:-.02em; }
+.support-section__meters { margin-top:1rem; }
+.support-section .button--gold { margin-top:1.2rem; }
 
 .support-section__card::after {
   content: none;
@@ -1757,4 +1761,10 @@ main {
   .hero-section__slide:first-child {
     opacity: 1;
   }
+}
+@media (min-width:861px) {
+  .support-section__content { padding-top:5rem; }
+  .support-section__content h2 { transform:translateY(.5rem); }
+  .support-section__meters { margin-top:1.25rem; }
+  .support-section .button--gold { margin-top:1.35rem; }
 }
