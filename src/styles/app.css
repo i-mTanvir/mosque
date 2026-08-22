@@ -650,7 +650,7 @@ main {
 .committee-reveal { opacity:0; transform:translateY(28px); transition:opacity 700ms ease, transform 700ms cubic-bezier(.2,.7,.2,1); transition-delay:var(--delay,0ms); }
 .committee-reveal.is-visible { opacity:1; transform:none; }
 @media (max-width:860px) { .committee-founder { grid-template-columns:1fr; max-width:34rem; } .committee-founder__copy { text-align:center; } .committee-row--2 { width:100%; } .committee-row--3 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-@media (max-width:560px) { .committee-section { padding:4.5rem 1.25rem 5rem; } .committee-row--2, .committee-row--3 { grid-template-columns:1fr; width:100%; gap:1.35rem; } .committee-founder { margin-bottom:3rem; } }
+@media (max-width:560px) { .committee-section { padding:4.5rem 1rem 5rem; } .committee-rows { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; } .committee-row, .committee-row--2, .committee-row--3 { display:contents; } .committee-founder { margin-bottom:3rem; } }
 @media (prefers-reduced-motion:reduce) { .committee-reveal { opacity:1; transform:none; transition:none; } }
 
 .support-section__card {
