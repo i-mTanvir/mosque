@@ -3,7 +3,7 @@ import { navigationItems } from '../../data/site'
 export function SiteHeader() {
   const onArchive = window.location.pathname === '/khutba'
   const onInnerPage = window.location.pathname !== '/'
-  const resolveHref = (href: string) => href === '#support' ? '/support' : (onInnerPage && href.startsWith('#') ? `/${href}` : href)
+  const resolveHref = (href: string) => href === '#top' ? '/' : href === '#support' ? '/support' : (onInnerPage && href.startsWith('#') ? `/${href}` : href)
   return (
     <header className={`site-header${onArchive ? ' site-header--archive' : ''}`}>
       <a className="site-header__brand" href="#top" aria-label="আশরাফিয়া জামে মসজিদের হোম">
