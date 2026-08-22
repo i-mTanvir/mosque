@@ -17,6 +17,7 @@ export function SiteHeader() {
               <a href={item.href}>{item.label}</a>
             </li>
           ))}
+          <li><a href="/khutba">জুমার খুতবা</a></li>
         </ul>
       </nav>
     </header>

@@ -10,8 +10,10 @@ import { SupportSection } from './sections/SupportSection'
 import { WelcomeSection } from './sections/WelcomeSection'
 import { CommitteeSection } from './sections/CommitteeSection'
 import { KhutbaSection } from './sections/KhutbaSection'
+import { KhutbaArchive } from './sections/KhutbaArchive'
 
 function App() {
+  if (window.location.pathname === '/khutba') return <KhutbaArchive />
   useEffect(() => {
     const hash = window.location.hash
 
