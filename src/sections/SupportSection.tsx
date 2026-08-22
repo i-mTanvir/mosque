@@ -9,16 +9,16 @@ export function SupportSection() {
           aria-hidden="true"
         />
         <div className="support-section__content">
-          <h2>Support Us, We Need Your Help.</h2>
+          <h2>আমাদের সহায়তা করুন, আপনার সহযোগিতা প্রয়োজন।</h2>
           <p>
-            May Allah bless you! Thank you. Those who give in charity spend of
-            their goods by night and by day.
+            আল্লাহ আপনাকে বরকত দিন! যারা দান করেন, তারা রাত ও দিনে নিজেদের
+            সম্পদ থেকে ব্যয় করেন—আপনার অনুদানও আমাদের সেবার কাজে সহায়তা করবে।
           </p>
           <div className="support-section__meters">
             <div>
               <div className="support-section__meter-labels">
-                <span>Raised: 29000</span>
-                <span>Goal: 50000</span>
+                <span>সংগৃহীত: ২৯,০০০</span>
+                <span>লক্ষ্য: ৫০,০০০</span>
               </div>
               <div className="support-section__meter">
                 <span style={{ width: '58%' }} />
@@ -26,7 +26,7 @@ export function SupportSection() {
             </div>
           </div>
           <a className="button button--gold" href="#contact">
-            Donate Now
+            এখনই অনুদান দিন
           </a>
         </div>
       </div>

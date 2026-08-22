@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import './styles/app.css'
 import { SiteHeader } from './components/layout/SiteHeader'
 import { FeatureSection } from './sections/FeatureSection'
@@ -8,6 +10,20 @@ import { SupportSection } from './sections/SupportSection'
 import { WelcomeSection } from './sections/WelcomeSection'
 
 function App() {
+  useEffect(() => {
+    const hash = window.location.hash
+
+    if (!hash) {
+      return
+    }
+
+    const timer = window.setTimeout(() => {
+      document.querySelector(hash)?.scrollIntoView({ block: 'start' })
+    }, 500)
+
+    return () => window.clearTimeout(timer)
+  }, [])
+
   return (
     <div className="site-shell">
       <SiteHeader />

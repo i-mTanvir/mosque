@@ -1,3 +1,59 @@
+@font-face {
+  font-family: 'Anek Bangla';
+  src: url('/fonts/anek-400.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Bangla';
+  src: url('/fonts/anek-500.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Bangla';
+  src: url('/fonts/anek-600.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Bangla';
+  src: url('/fonts/anek-700.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Bengali';
+  src: url('/fonts/noto-serif-500.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Bengali';
+  src: url('/fonts/noto-serif-600.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Bengali';
+  src: url('/fonts/noto-serif-700.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --page-background: #f9f6f0;
   --text-color: #5d5547;
@@ -5,8 +61,8 @@
   --green-dark: #0d624b;
   --gold: #d9a538;
   --gold-strong: #be8a21;
-  --font-body: 'Poppins', 'Segoe UI', sans-serif;
-  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Anek Bangla', 'Segoe UI', sans-serif;
+  --font-display: 'Noto Serif Bengali', Georgia, serif;
   font-family: var(--font-body);
   line-height: 1.65;
   font-weight: 400;
@@ -62,7 +118,7 @@ h2,
 h3 {
   font-family: var(--font-display);
   color: var(--heading-color);
-  line-height: 0.95;
+  line-height: 1.2;
 }
 
 h1 {

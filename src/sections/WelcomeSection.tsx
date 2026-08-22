@@ -30,53 +30,51 @@ export function WelcomeSection() {
   }, [isVideoOpen])
 
   return (
-    <section className="welcome-section">
+    <section className="welcome-section" id="welcome">
       <SectionTitle
-        eyebrow="Welcome to the Islamic center"
-        title="In the Name of Allah the Beneficent the Merciful"
+        eyebrow="ইসলামিক কেন্দ্রে আপনাকে স্বাগতম"
+        title="পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে"
         description=""
         centered
       />
       <div className="welcome-section__body">
         <div className="welcome-section__copy">
           <p>
-            Our mosque exists to be a spiritual home for worship, a center for
-            Islamic learning, and a place of belonging for families, youth, and
-            neighbors. Through daily prayer, Quran study, charity, and
-            community service, we aim to strengthen faith, nurture good
-            character, and serve the wider society with mercy, respect, and
-            sincere care.
+            আমাদের মসজিদ ইবাদতের আধ্যাত্মিক আশ্রয়, ইসলামি জ্ঞানচর্চার কেন্দ্র
+            এবং পরিবার, তরুণ ও প্রতিবেশীদের আপন ঠিকানা। প্রতিদিনের নামাজ,
+            কুরআন শিক্ষা, অনুদান ও মানবসেবার মাধ্যমে আমরা ঈমানকে দৃঢ় করতে,
+            উত্তম চরিত্র গড়ে তুলতে এবং দয়া, সম্মান ও আন্তরিকতার সঙ্গে সমাজের
+            সেবা করতে চাই।
           </p>
           <a className="welcome-section__button" href="#services">
-            Read More
+            আরও পড়ুন
           </a>
         </div>
 
         <div className="welcome-section__points">
           <article className="welcome-point">
             <div className="welcome-point__icon">
-              <img src="/media/allah-icon.jpg" alt="Allah icon" />
+              <img src="/media/allah-icon.jpg" alt="আল্লাহর নামের প্রতীক" />
             </div>
             <div>
-              <h3>Our Vision</h3>
+              <h3>আমাদের স্বপ্ন</h3>
               <p>
-                To be a welcoming mosque that inspires faith, provides Islamic
-                guidance, and helps every generation grow in worship,
-                knowledge, and community belonging.
+                এমন একটি সবার-আপন মসজিদ হওয়া, যা ঈমান জাগ্রত করে, ইসলামি
+                দিকনির্দেশনা দেয় এবং প্রতিটি প্রজন্মকে ইবাদত, জ্ঞান ও
+                পারস্পরিক সম্প্রীতিতে বেড়ে উঠতে সহায়তা করে।
               </p>
             </div>
           </article>
 
           <article className="welcome-point">
             <div className="welcome-point__icon">
-              <img src="/media/quran-icon.jpg" alt="Quran icon" />
+              <img src="/media/quran-icon.jpg" alt="কুরআনের প্রতীক" />
             </div>
             <div>
-              <h3>Our Mission</h3>
+              <h3>আমাদের লক্ষ্য</h3>
               <p>
-                To serve spiritual, educational, and communal needs through
-                prayer, Quran learning, outreach, charity, and positive service
-                to the wider society.
+                নামাজ, কুরআন শিক্ষা, দাওয়াহ, অনুদান ও সমাজসেবার মাধ্যমে
+                মানুষের আধ্যাত্মিক, শিক্ষাগত ও সামাজিক প্রয়োজন পূরণ করা।
               </p>
             </div>
           </article>
@@ -88,12 +86,12 @@ export function WelcomeSection() {
           className="welcome-section__video-trigger"
           type="button"
           onClick={() => setIsVideoOpen(true)}
-          aria-label="Play mosque video"
+          aria-label="মসজিদের ভিডিও চালু করুন"
         >
           <img
             className="welcome-section__image"
             src="/media/salat.png"
-            alt="People performing salah in the mosque"
+            alt="মসজিদে মুসল্লিদের নামাজ আদায়ের দৃশ্য"
           />
           <span className="welcome-section__play-button" aria-hidden="true">
             <span className="welcome-section__play-rings" />
@@ -115,7 +113,7 @@ export function WelcomeSection() {
           className="video-modal"
           role="dialog"
           aria-modal="true"
-          aria-label="Mosque video player"
+          aria-label="মসজিদের ভিডিও প্লেয়ার"
           onClick={() => setIsVideoOpen(false)}
         >
           <div
@@ -126,9 +124,9 @@ export function WelcomeSection() {
               className="video-modal__close"
               type="button"
               onClick={() => setIsVideoOpen(false)}
-              aria-label="Close video"
+              aria-label="ভিডিও বন্ধ করুন"
             >
-              Close
+              বন্ধ করুন
             </button>
             <div className="video-modal__frame-wrap">
               <iframe

@@ -50,11 +50,6 @@
   box-shadow: 0 12px 24px rgba(176, 125, 27, 0.28);
 }
 
-.brand-badge--footer {
-  width: 5.25rem;
-  height: 5.6rem;
-}
-
 .site-header__nav {
   display: flex;
   align-items: center;

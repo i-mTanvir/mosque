@@ -10,11 +10,11 @@ export interface FeatureItem {
 }
 
 export const navigationItems: NavigationItem[] = [
-  { href: '#top', label: 'Home' },
-  { href: '#support', label: 'Charity' },
-  { href: '#services', label: 'Events' },
-  { href: '#pillars', label: 'Scholars' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#top', label: 'হোম' },
+  { href: '#support', label: 'অনুদান' },
+  { href: '#services', label: 'কার্যক্রম' },
+  { href: '#pillars', label: 'ইসলামের স্তম্ভ' },
+  { href: '#contact', label: 'যোগাযোগ' },
 ]
 
 export interface FooterDetail {
@@ -27,26 +27,26 @@ export interface FooterDetail {
 export const contactDetails: FooterDetail[] = [
   {
     icon: 'P',
-    label: 'Hotline',
+    label: 'হটলাইন',
     value: '1800-123-456-7',
-    note: 'Mon - Sat, 9:00 am - 6:00 pm',
+    note: 'শনি - বৃহস্পতি, সকাল ৯টা - সন্ধ্যা ৬টা',
   },
   {
     icon: '@',
-    label: 'Email',
+    label: 'ই-মেইল',
     value: 'username@domain.com',
   },
   {
     icon: 'L',
-    label: 'Address',
-    value: 'New Orleans, Jamia Mosque',
+    label: 'ঠিকানা',
+    value: 'আশরাফিয়া জামে মসজিদ প্রাঙ্গণ',
   },
 ]
 
 export const footerLinks: NavigationItem[] = [
-  { href: '#top', label: 'Home - Islamic Center' },
-  { href: '#pillars', label: 'Salat Timings' },
-  { href: '#support', label: 'Travel & Tours' },
-  { href: '#contact', label: 'Online Classes' },
-  { href: '#contact', label: 'Term Conditions' },
+  { href: '#top', label: 'হোম - ইসলামিক কেন্দ্র' },
+  { href: '#pillars', label: 'নামাজের সময়সূচি' },
+  { href: '#support', label: 'ভ্রমণ ও সফর' },
+  { href: '#contact', label: 'অনলাইন ক্লাস' },
+  { href: '#contact', label: 'শর্তাবলি' },
 ]
