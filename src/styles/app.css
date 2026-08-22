@@ -245,6 +245,8 @@ main {
   font-weight: 500;
   opacity: 0.9;
 }
+.feature-quote { animation: featureQuoteIn 900ms cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes featureQuoteIn { 0% { opacity: 0; transform: translateY(34px); } 55% { opacity: .82; } 100% { opacity: 1; transform: translateY(0); } }
 
 .feature-section__button {
   display: inline-flex;
