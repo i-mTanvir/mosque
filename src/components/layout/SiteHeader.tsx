@@ -1,8 +1,10 @@
 import { navigationItems } from '../../data/site'
 
 export function SiteHeader() {
+  const onArchive = window.location.pathname === '/khutba'
+  const resolveHref = (href: string) => onArchive && href.startsWith('#') ? `/${href}` : href
   return (
-    <header className="site-header">
+    <header className={`site-header${onArchive ? ' site-header--archive' : ''}`}>
       <a className="site-header__brand" href="#top" aria-label="আশরাফিয়া জামে মসজিদের হোম">
         <img src="/media/logo.png" alt="আশরাফিয়া জামে মসজিদের লোগো" />
       </a>
@@ -14,7 +16,7 @@ export function SiteHeader() {
         <ul className="site-header__nav">
           {navigationItems.map((item) => (
             <li key={item.href}>
-              <a href={item.href}>{item.label}</a>
+              <a href={resolveHref(item.href)}>{item.label}</a>
             </li>
           ))}
           <li><a href="/khutba">জুমার খুতবা</a></li>
