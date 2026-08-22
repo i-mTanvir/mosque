@@ -66,6 +66,9 @@
   font-weight: 600;
   color: rgba(255, 255, 255, 0.94);
 }
+.site-header__nav li:nth-child(3) { order:4; }
+.site-header__nav li:last-child { order:3; }
+.site-header__nav a:hover,.site-header__nav a.is-active { color:var(--gold); }
 
 .button,
 .site-header__button {
@@ -1449,7 +1452,7 @@ main {
 
 @media (max-width: 640px) {
   .site-header {
-    padding-right: 0.65rem;
+    padding-right: 1.25rem;
     padding-left: 5.1rem;
   }
 
@@ -1464,11 +1467,12 @@ main {
 
   .site-header__nav {
     justify-content: flex-end;
-    gap: clamp(0.35rem, 1.8vw, 0.55rem);
+    gap: clamp(0.7rem, 2.8vw, 1.1rem);
   }
 
   .site-header__nav a {
-    font-size: clamp(0.52rem, 2.15vw, 0.67rem);
+    font-size: clamp(0.68rem, 2.8vw, 0.82rem);
+    padding: 0.45rem 0;
   }
 
   .hero-section,

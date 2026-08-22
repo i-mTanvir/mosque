@@ -17,10 +17,10 @@ export function SiteHeader() {
         <ul className="site-header__nav">
           {navigationItems.map((item) => (
             <li key={item.href}>
-              <a href={resolveHref(item.href)}>{item.label}</a>
+              <a className={(window.location.pathname === item.href || (item.href === '#top' && window.location.pathname === '/') || (item.href === '#support' && window.location.pathname === '/support')) ? 'is-active' : ''} href={resolveHref(item.href)}>{item.label}</a>
             </li>
           ))}
-          <li><a href="/khutba">জুমার খুতবা</a></li>
+          <li><a className={window.location.pathname === '/khutba' ? 'is-active' : ''} href="/khutba">জুমার খুতবা</a></li>
         </ul>
       </nav>
     </header>
