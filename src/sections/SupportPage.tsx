@@ -34,19 +34,19 @@ export function SupportPage() {
             <div className="support-method">
               <b>বিকাশ</b>
               <span>
-                01XXXXXXXXX <Copy value="01XXXXXXXXX" />
+                {mosqueInfo.phone} <Copy value={mosqueInfo.phone} />
               </span>
             </div>
             <div className="support-method">
               <b>নগদ</b>
               <span>
-                01XXXXXXXXX <Copy value="01XXXXXXXXX" />
+                {mosqueInfo.phone} <Copy value={mosqueInfo.phone} />
               </span>
             </div>
             <div className="support-method">
               <b>রকেট</b>
               <span>
-                01XXXXXXXXX <Copy value="01XXXXXXXXX" />
+                {mosqueInfo.phone} <Copy value={mosqueInfo.phone} />
               </span>
             </div>
             <div className="support-bank">
