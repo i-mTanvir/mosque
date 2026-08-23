@@ -9,12 +9,6 @@ export interface FeatureItem {
   description: string
 }
 
-export const navigationItems: NavigationItem[] = [
-  { href: '#top', label: 'হোম' },
-  { href: '#support', label: 'অনুদান' },
-  { href: '#contact', label: 'যোগাযোগ' },
-]
-
 export interface FooterDetail {
   icon: string
   label: string
@@ -22,29 +16,42 @@ export interface FooterDetail {
   note?: string
 }
 
+export const mosqueInfo = {
+  name: 'আশ্রাফিয়া জামে মসজিদ',
+  established: '২০০৬ ইং',
+  phone: '+8801754-919054',
+  village: 'দক্ষিণ কেরুয়া',
+  postOffice: 'মোল্যারহাট',
+  upazila: 'রায়পুর',
+  district: 'লক্ষ্মীপুর',
+}
+
+export const mosqueLocation = `গ্রাম: ${mosqueInfo.village}, পোস্ট অফিস: ${mosqueInfo.postOffice}, উপজেলা: ${mosqueInfo.upazila}, জেলা: ${mosqueInfo.district}`
+
+export const navigationItems: NavigationItem[] = [
+  { href: '#top', label: 'হোম' },
+  { href: '#support', label: 'অনুদান' },
+  { href: '#contact', label: 'যোগাযোগ' },
+]
+
 export const contactDetails: FooterDetail[] = [
   {
     icon: 'P',
-    label: 'হটলাইন',
-    value: '1800-123-456-7',
-    note: 'শনি - বৃহস্পতি, সকাল ৯টা - সন্ধ্যা ৬টা',
-  },
-  {
-    icon: '@',
-    label: 'ই-মেইল',
-    value: 'username@domain.com',
+    label: 'মোবাইল',
+    value: mosqueInfo.phone,
+    note: 'প্রয়োজনে সরাসরি যোগাযোগ করতে পারেন',
   },
   {
     icon: 'L',
-    label: 'ঠিকানা',
-    value: 'আশরাফিয়া জামে মসজিদ প্রাঙ্গণ',
+    label: 'লোকেশন',
+    value: mosqueLocation,
+    note: `স্থাপিত: ${mosqueInfo.established}`,
   },
 ]
 
 export const footerLinks: NavigationItem[] = [
-  { href: '#top', label: 'হোম - ইসলামিক কেন্দ্র' },
-  { href: '#pillars', label: 'নামাজের সময়সূচি' },
-  { href: '#support', label: 'ভ্রমণ ও সফর' },
-  { href: '#contact', label: 'অনলাইন ক্লাস' },
-  { href: '#contact', label: 'শর্তাবলি' },
+  { href: '#top', label: 'হোম' },
+  { href: '/support', label: 'অনুদান' },
+  { href: '/khutba', label: 'জুমার খুতবা' },
+  { href: '#contact', label: 'যোগাযোগ' },
 ]

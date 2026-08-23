@@ -4,14 +4,13 @@ import {
   FaLinkedinIn,
   FaXTwitter,
 } from 'react-icons/fa6'
-import { FiChevronRight, FiMail, FiMapPin, FiMoon, FiPhone } from 'react-icons/fi'
+import { FiChevronRight, FiMapPin, FiMoon, FiPhone } from 'react-icons/fi'
 
-import { contactDetails, footerLinks } from '../../data/site'
+import { contactDetails, footerLinks, mosqueInfo, mosqueLocation } from '../../data/site'
 
 const contactIcons = {
-  'হটলাইন': FiPhone,
-  'ই-মেইল': FiMail,
-  'ঠিকানা': FiMapPin,
+  মোবাইল: FiPhone,
+  লোকেশন: FiMapPin,
 } as const
 
 const socialLinks = [
@@ -27,11 +26,11 @@ export function SiteFooter() {
       <div className="site-footer__cta">
         <FiMoon className="site-footer__cta-icon" aria-hidden="true" />
         <div className="site-footer__cta-copy">
-          <p>আমাদের সম্প্রদায়ের অংশ হোন</p>
-          <h2>অনুপ্রাণিত? এখনই আমাদের সঙ্গে যুক্ত হোন!</h2>
+          <p>আমাদের মসজিদের সাথে থাকুন</p>
+          <h2>ইবাদত, দ্বীনি শিক্ষা ও সমাজসেবার পথে একসাথে চলুন</h2>
         </div>
-        <a className="button button--gold site-footer__cta-button" href="#contact">
-          সম্প্রদায়ে যুক্ত হোন
+        <a className="button button--gold site-footer__cta-button" href="/support">
+          অনুদান করুন
         </a>
       </div>
 
@@ -42,19 +41,32 @@ export function SiteFooter() {
           <img
             className="site-footer__logo"
             src="/media/footer-logo.png"
-            alt="আশরাফিয়া জামে মসজিদের ফুটার লোগো"
+            alt={`${mosqueInfo.name} এর ফুটার লোগো`}
           />
         </div>
+
         <div className="site-footer__info-block">
           <h3>পরিচিতি</h3>
           <p>
-            আশরাফিয়া জামে মসজিদ হলো ইবাদত, জ্ঞানচর্চা, মানবসেবা ও সম্প্রীতির
-            একটি উন্মুক্ত কেন্দ্র। কুরআন-সুন্নাহর আলোকে সমাজের কল্যাণে আমরা
-            একসঙ্গে কাজ করি।
+            {mosqueInfo.name} হলো ইবাদত, জ্ঞানচর্চা, মানবসেবা ও সম্প্রীতির একটি প্রাণবন্ত
+            ইসলামি কেন্দ্র। কুরআন-সুন্নাহর আলোকে সমাজে কল্যাণ, দ্বীনি চেতনা ও নৈতিকতার
+            বিকাশে আমরা একসাথে কাজ করে যাচ্ছি।
           </p>
+
+          <div className="site-footer__meta">
+            <div className="site-footer__meta-item">
+              <span>মসজিদের নাম</span>
+              <strong>{mosqueInfo.name}</strong>
+            </div>
+            <div className="site-footer__meta-item">
+              <span>স্থাপিত</span>
+              <strong>{mosqueInfo.established}</strong>
+            </div>
+          </div>
         </div>
+
         <div className="site-footer__contact-block">
-          <h3>যোগাযোগের তথ্য</h3>
+          <h3>যোগাযোগ ও ঠিকানা</h3>
           <ul className="site-footer__list">
             {contactDetails.map((detail) => {
               const Icon = contactIcons[detail.label as keyof typeof contactIcons] ?? FiPhone
@@ -65,9 +77,8 @@ export function SiteFooter() {
                     <Icon aria-hidden="true" />
                   </span>
                   <div>
-                    <strong>
-                      {detail.label}: {detail.value}
-                    </strong>
+                    <strong>{detail.label}</strong>
+                    <span>{detail.value}</span>
                     {detail.note ? <span>{detail.note}</span> : null}
                   </div>
                 </li>
@@ -75,6 +86,7 @@ export function SiteFooter() {
             })}
           </ul>
         </div>
+
         <div className="site-footer__links-block">
           <h3>দ্রুত লিংক</h3>
           <ul className="site-footer__links">
@@ -85,6 +97,11 @@ export function SiteFooter() {
               </li>
             ))}
           </ul>
+
+          <div className="site-footer__address-card">
+            <span>পূর্ণ ঠিকানা</span>
+            <strong>{mosqueLocation}</strong>
+          </div>
         </div>
       </div>
 
@@ -92,7 +109,7 @@ export function SiteFooter() {
 
       <div className="site-footer__bottom">
         <p>
-          আশরাফিয়া জামে মসজিদ &copy; ২০২৬, <span>সর্বস্বত্ব সংরক্ষিত</span>
+          {mosqueInfo.name} &copy; ২০২৬, <span>সর্বস্বত্ব সংরক্ষিত</span>
         </p>
         <div className="site-footer__socials" aria-label="সামাজিক যোগাযোগের লিংক">
           {socialLinks.map((link) => {

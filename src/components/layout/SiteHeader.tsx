@@ -1,14 +1,24 @@
-import { navigationItems } from '../../data/site'
+import { mosqueInfo, navigationItems } from '../../data/site'
 
 export function SiteHeader() {
   const onArchive = window.location.pathname === '/khutba'
   const onInnerPage = window.location.pathname !== '/'
-  const resolveHref = (href: string) => href === '#top' ? '/' : href === '#support' ? '/support' : (onInnerPage && href.startsWith('#') ? `/${href}` : href)
+
+  const resolveHref = (href: string) =>
+    href === '#top'
+      ? '/'
+      : href === '#support'
+        ? '/support'
+        : onInnerPage && href.startsWith('#')
+          ? `/${href}`
+          : href
+
   return (
     <header className={`site-header${onArchive ? ' site-header--archive' : ''}`}>
-      <a className="site-header__brand" href="#top" aria-label="আশরাফিয়া জামে মসজিদের হোম">
-        <img src="/media/logo.png" alt="আশরাফিয়া জামে মসজিদের লোগো" />
+      <a className="site-header__brand" href="#top" aria-label={`${mosqueInfo.name} এর হোম`}>
+        <img src="/media/logo.png" alt={`${mosqueInfo.name} এর লোগো`} />
       </a>
+
       <nav
         id="primary-navigation"
         className="site-header__navigation"
@@ -17,10 +27,25 @@ export function SiteHeader() {
         <ul className="site-header__nav">
           {navigationItems.map((item) => (
             <li key={item.href}>
-              <a className={(window.location.pathname === item.href || (item.href === '#top' && window.location.pathname === '/') || (item.href === '#support' && window.location.pathname === '/support')) ? 'is-active' : ''} href={resolveHref(item.href)}>{item.label}</a>
+              <a
+                className={
+                  window.location.pathname === item.href ||
+                  (item.href === '#top' && window.location.pathname === '/') ||
+                  (item.href === '#support' && window.location.pathname === '/support')
+                    ? 'is-active'
+                    : ''
+                }
+                href={resolveHref(item.href)}
+              >
+                {item.label}
+              </a>
             </li>
           ))}
-          <li><a className={window.location.pathname === '/khutba' ? 'is-active' : ''} href="/khutba">জুমার খুতবা</a></li>
+          <li>
+            <a className={window.location.pathname === '/khutba' ? 'is-active' : ''} href="/khutba">
+              জুমার খুতবা
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

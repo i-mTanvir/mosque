@@ -1073,6 +1073,36 @@ main {
   line-height: 1.8;
 }
 
+.site-footer__meta {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.4rem;
+}
+
+.site-footer__meta-item,
+.site-footer__address-card {
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.site-footer__meta-item span,
+.site-footer__address-card span {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.site-footer__meta-item strong,
+.site-footer__address-card strong {
+  display: block;
+  color: rgba(255, 255, 255, 0.97);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
 .site-footer__list,
 .site-footer__links {
   display: grid;
@@ -1125,6 +1155,10 @@ main {
   flex: 0 0 auto;
   font-size: 0.9rem;
   color: var(--gold);
+}
+
+.site-footer__address-card {
+  margin-top: 1.2rem;
 }
 
 .site-footer__bottom {
