@@ -184,18 +184,14 @@ main {
 
 @keyframes heroFade {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
 
-  6% {
+  18% {
     opacity: 1;
   }
 
   24% {
-    opacity: 1;
-  }
-
-  30% {
     opacity: 0;
   }
 

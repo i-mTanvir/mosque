@@ -1,9 +1,13 @@
 const heroImages = [
-  '/media/hero1.png',
-  '/media/hero2.png',
-  '/media/hero3.png',
-  '/media/hero4.png',
-]
+  '/media/Hero Images/1.png',
+  '/media/Hero Images/2.png',
+  '/media/Hero Images/3.png',
+  '/media/Hero Images/4.png',
+  '/media/Hero Images/5.png',
+  '/media/Hero Images/6.png',
+].map((path) => encodeURI(path))
+
+const slideDuration = 4
 
 export function HeroSection() {
   return (
@@ -13,7 +17,11 @@ export function HeroSection() {
           <div
             key={image}
             className="hero-section__slide"
-            style={{ animationDelay: `${index * 4}s`, backgroundImage: `url(${image})` }}
+            style={{
+              animationDelay: `${index * slideDuration}s`,
+              animationDuration: `${heroImages.length * slideDuration}s`,
+              backgroundImage: `url(${image})`,
+            }}
           />
         ))}
       </div>
