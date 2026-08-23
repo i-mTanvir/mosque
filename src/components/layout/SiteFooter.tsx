@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa6'
 import { FiChevronRight, FiMapPin, FiMoon, FiPhone } from 'react-icons/fi'
 
-import { contactDetails, footerLinks, mosqueInfo, mosqueLocation } from '../../data/site'
+import { contactDetails, footerLinks, mosqueInfo } from '../../data/site'
 
 const contactIcons = {
   মোবাইল: FiPhone,
@@ -52,17 +52,6 @@ export function SiteFooter() {
             ইসলামি কেন্দ্র। কুরআন-সুন্নাহর আলোকে সমাজে কল্যাণ, দ্বীনি চেতনা ও নৈতিকতার
             বিকাশে আমরা একসাথে কাজ করে যাচ্ছি।
           </p>
-
-          <div className="site-footer__meta">
-            <div className="site-footer__meta-item">
-              <span>মসজিদের নাম</span>
-              <strong>{mosqueInfo.name}</strong>
-            </div>
-            <div className="site-footer__meta-item">
-              <span>স্থাপিত</span>
-              <strong>{mosqueInfo.established}</strong>
-            </div>
-          </div>
         </div>
 
         <div className="site-footer__contact-block">
@@ -97,11 +86,6 @@ export function SiteFooter() {
               </li>
             ))}
           </ul>
-
-          <div className="site-footer__address-card">
-            <span>পূর্ণ ঠিকানা</span>
-            <strong>{mosqueLocation}</strong>
-          </div>
         </div>
       </div>
 
