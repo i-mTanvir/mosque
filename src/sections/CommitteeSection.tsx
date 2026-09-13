@@ -18,8 +18,9 @@ const leaders = [
 ]
 
 const generalMembers = [
-  { image: '2m.png', role: 'সভাপতি', name: 'সভাপতি' },
-  { image: '3m.png', role: 'সহসভাপতি', name: 'সহসভাপতি' },
+  { image: '2m.png', role: 'ইমাম ও খতিব', name: 'মোঃ আমিনুল এহছান হাসান' },
+  { image: '3m.png', role: 'মুয়াজ্জিন', name: 'মোঃ শাহিন আলম' },
+  { image: '3.5m.png', role: 'খাদেম', name: 'মোঃ আরমান হোসাইন' },
   { image: '4m.png', role: 'সহসভাপতি', name: 'সহসভাপতি' },
   { image: '5m.png', role: 'ইমাম', name: 'ইমাম' },
   { image: '6m.png', role: 'মুয়াজ্জিন', name: 'মুয়াজ্জিন' },
@@ -63,7 +64,7 @@ export function CommitteeSection() {
       ))}
 
       <div className="committee-rows">
-        {[generalMembers.slice(0, 2), generalMembers.slice(2, 5), generalMembers.slice(5, 8)].map((row, rowIndex) => (
+        {[generalMembers.slice(0, 3), generalMembers.slice(3, 6), generalMembers.slice(6, 9)].map((row, rowIndex) => (
           <div className={`committee-row committee-row--${row.length}`} key={rowIndex}>
             {row.map((member, index) => (
               <article
