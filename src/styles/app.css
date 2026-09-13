@@ -735,6 +735,12 @@ main {
 .committee-founder__copy { max-width: 38rem; }
 .committee-founder__copy h3, .committee-card h3 { margin: .25rem 0 .65rem; font-size: clamp(1.5rem, 3vw, 2.35rem); }
 .committee-founder__copy > p:last-child { color:#625a4f; line-height:1.9; font-size:1rem; }
+.committee-founder--innovator { grid-template-columns: 1fr minmax(13rem, 21rem); max-width: 63rem; margin: 0 auto 5rem; }
+.committee-founder--innovator .committee-founder__portrait { order: 2; }
+.committee-founder--innovator .committee-founder__portrait img { max-width: 20rem; margin-left: auto; }
+.committee-founder--innovator .committee-founder__copy { order: 1; justify-self: end; }
+.committee-founder--innovator .committee-founder__copy h3 { font-size: clamp(1.3rem, 2.5vw, 1.95rem); }
+.committee-founder--innovator .committee-founder__copy > p:last-child { font-size: 0.95rem; line-height: 1.8; }
 .committee-card__role { margin:0; color:var(--gold-strong); font-size:.75rem; font-weight:700; letter-spacing:.12em; }
 .committee-rows { max-width:72rem; margin:auto; display:grid; gap:5rem; }
 .committee-row { display:grid; gap:2rem; justify-content:center; }
@@ -746,7 +752,16 @@ main {
 .committee-card__body { display:none; }
 .committee-reveal { opacity:0; transform:translateY(28px); transition:opacity 700ms ease, transform 700ms cubic-bezier(.2,.7,.2,1); transition-delay:var(--delay,0ms); }
 .committee-reveal.is-visible { opacity:1; transform:none; }
-@media (max-width:860px) { .committee-founder { grid-template-columns:1fr; max-width:34rem; } .committee-founder__copy { text-align:center; } .committee-row--2 { width:100%; } .committee-row--3 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:860px) {
+  .committee-founder { grid-template-columns:1fr; max-width:34rem; }
+  .committee-founder__copy { text-align:center; }
+  .committee-founder--innovator { max-width:28rem; }
+  .committee-founder--innovator .committee-founder__portrait { order: 1; }
+  .committee-founder--innovator .committee-founder__copy { order: 2; justify-self: center; text-align: center; }
+  .committee-founder--innovator .committee-founder__portrait img { margin: 0 auto; }
+  .committee-row--2 { width:100%; }
+  .committee-row--3 { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
 @media (max-width:560px) { .committee-section { padding:4.5rem 1rem 5rem; } .committee-rows { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; } .committee-row, .committee-row--2, .committee-row--3 { display:contents; } .committee-founder { margin-bottom:3rem; } }
 @media (prefers-reduced-motion:reduce) { .committee-reveal { opacity:1; transform:none; transition:none; } }
 
