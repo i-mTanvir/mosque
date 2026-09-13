@@ -26,6 +26,7 @@ const generalMembers = [
   { image: '5m.png', role: 'সহ-সভাপতি', name: 'সৌরভ হোসেন' },
   { image: '6m.png', role: 'সহ-সভাপতি', name: 'মোঃ জাহাঙ্গীর আলম' },
   { image: '7m.png', role: 'সেক্রেটারি', name: 'হোসেন আহমেদ মাস্টার' },
+  { image: '7.5m.png', role: 'সহ-সেক্রেটারি', name: 'নাচিমুল হক সুমন' },
   { image: '8m.png', role: 'কোষাধ্যক্ষ', name: 'ইব্রাহিম খলিল' },
   { image: '9m.png', role: 'সহকারী কোষাধ্যক্ষ', name: 'মোঃ সুমন হোসাইন' },
 ]
@@ -69,7 +70,7 @@ export function CommitteeSection() {
           generalMembers.slice(0, 3),
           generalMembers.slice(3, 5),
           generalMembers.slice(5, 8),
-          generalMembers.slice(8, 10),
+          generalMembers.slice(8, 11),
         ].map((row, rowIndex) => (
           <div className={`committee-row committee-row--${row.length}`} key={rowIndex}>
             {row.map((member, index) => (
