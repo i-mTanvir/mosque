@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const popupImage = encodeURI('/media/Hero Images/4.png')
+const popupImage = encodeURI('/media/Donate for Mosque.png')
 
 export function DonationPopup() {
   const [open, setOpen] = useState(false)
