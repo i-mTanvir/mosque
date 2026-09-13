@@ -21,12 +21,13 @@ const generalMembers = [
   { image: '2m.png', role: 'ইমাম ও খতিব', name: 'মোঃ আমিনুল এহছান হাসান' },
   { image: '3m.png', role: 'মুয়াজ্জিন', name: 'মোঃ শাহিন আলম' },
   { image: '3.5m.png', role: 'খাদেম', name: 'মোঃ আরমান হোসাইন' },
-  { image: '4m.png', role: 'সহসভাপতি', name: 'সহসভাপতি' },
-  { image: '5m.png', role: 'ইমাম', name: 'ইমাম' },
-  { image: '6m.png', role: 'মুয়াজ্জিন', name: 'মুয়াজ্জিন' },
-  { image: '7m.png', role: 'সেক্রেটারি', name: 'সেক্রেটারি' },
-  { image: '8m.png', role: 'কোষাধ্যক্ষ', name: 'কোষাধ্যক্ষ' },
-  { image: '9m.png', role: 'সহকারী কোষাধ্যক্ষ', name: 'সহকারী কোষাধ্যক্ষ' },
+  { image: '4m.png', role: 'সভাপতি', name: 'দারাজ মাহমুদ' },
+  { image: '4.5m.png', role: 'সিনিয়র সহ-সভাপতি', name: 'মোঃ মিজানুর রহমান' },
+  { image: '5m.png', role: 'সহ-সভাপতি', name: 'সৌরভ হোসেন' },
+  { image: '6m.png', role: 'সহ-সভাপতি', name: 'মোঃ জাহাঙ্গীর আলম' },
+  { image: '7m.png', role: 'সেক্রেটারি', name: 'হোসেন আহমেদ মাস্টার' },
+  { image: '8m.png', role: 'কোষাধ্যক্ষ', name: 'ইব্রাহিম খলিল' },
+  { image: '9m.png', role: 'সহকারী কোষাধ্যক্ষ', name: 'মোঃ সুমন হোসাইন' },
 ]
 
 export function CommitteeSection() {
@@ -64,7 +65,12 @@ export function CommitteeSection() {
       ))}
 
       <div className="committee-rows">
-        {[generalMembers.slice(0, 3), generalMembers.slice(3, 6), generalMembers.slice(6, 9)].map((row, rowIndex) => (
+        {[
+          generalMembers.slice(0, 3),
+          generalMembers.slice(3, 5),
+          generalMembers.slice(5, 8),
+          generalMembers.slice(8, 10),
+        ].map((row, rowIndex) => (
           <div className={`committee-row committee-row--${row.length}`} key={rowIndex}>
             {row.map((member, index) => (
               <article
