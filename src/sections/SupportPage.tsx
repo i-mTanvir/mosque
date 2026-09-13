@@ -51,11 +51,12 @@ export function SupportPage() {
             </div>
             <div className="support-bank">
               <b>ব্যাংক অ্যাকাউন্ট</b>
-              <span>{mosqueInfo.name}</span>
+              <span>DARAZ MAHMUD</span>
               <span>
-                অ্যাকাউন্ট নং: XXXXXXXX <Copy value="XXXXXXXX" />
+                অ্যাকাউন্ট নং: 6762797305001 <Copy value="6762797305001" />
               </span>
-              <span>ব্যাংক: ইসলামী ব্যাংক বাংলাদেশ</span>
+              <span>ব্যাংক: City Bank PLC</span>
+              <span>শাখা: Jamuna Future Park Branch, Dhaka</span>
             </div>
           </div>
 
