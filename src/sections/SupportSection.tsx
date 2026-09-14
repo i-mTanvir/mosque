@@ -4,17 +4,19 @@ export function SupportSection() {
       <div className="support-section__card">
         <img
           className="support-section__image"
-          src="/media/goal.png"
+          src="/media/goal.webp"
           alt=""
           aria-hidden="true"
+          loading="lazy"
+          decoding="async"
         />
         <div className="support-section__content">
-          <h2>আমাদের সহায়তা করুন, আপনার সহযোগিতা প্রয়োজন।</h2>
+          <h2>আপনার সহযোগিতা প্রয়োজন।</h2>
           <div className="support-section__meters">
             <div>
               <div className="support-section__meter-labels">
-                <span>সংগৃহীত: ২,৩০,০০০</span>
-                <span>লক্ষ্য: ৮,০০,০০০</span>
+                <span>সংগৃহীত: ৳২,৩০,০০০</span>
+                <span>লক্ষ্য: ৳৮,০০,০০০</span>
               </div>
               <div className="support-section__meter">
                 <span style={{ width: '28.75%' }} />

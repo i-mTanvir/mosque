@@ -1,10 +1,10 @@
 const heroImages = [
-  '/media/Hero Images/1.png',
-  '/media/Hero Images/2.png',
-  '/media/Hero Images/3.png',
-  '/media/Hero Images/4.png',
-  '/media/Hero Images/5.png',
-  '/media/Hero Images/6.png',
+  '/media/Hero Images/1.webp',
+  '/media/Hero Images/2.webp',
+  '/media/Hero Images/3.webp',
+  '/media/Hero Images/4.webp',
+  '/media/Hero Images/5.webp',
+  '/media/Hero Images/6.webp',
 ].map((path) => encodeURI(path))
 
 const slideDuration = 4

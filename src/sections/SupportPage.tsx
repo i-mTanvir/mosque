@@ -105,7 +105,13 @@ export function SupportPage() {
             করবেন।”
             <small>সুনানে আন-নাসায়ী, হাদিস নং ৬৮৮</small>
           </p>
-          <img className="support-proof" src="/media/goal.png" alt="মসজিদের চলমান কাজ" />
+          <img
+            className="support-proof"
+            src="/media/goal.webp"
+            alt="মসজিদের চলমান কাজ"
+            loading="lazy"
+            decoding="async"
+          />
         </section>
       </main>
 

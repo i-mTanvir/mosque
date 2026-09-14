@@ -26,7 +26,6 @@ export function SiteFooter() {
       <div className="site-footer__cta">
         <FiMoon className="site-footer__cta-icon" aria-hidden="true" />
         <div className="site-footer__cta-copy">
-          <p>আমাদের মসজিদের সাথে থাকুন</p>
           <h2>ইবাদত, দ্বীনি শিক্ষা ও সমাজসেবার পথে একসাথে চলুন</h2>
         </div>
         <a className="button button--gold site-footer__cta-button" href="/support">
@@ -40,8 +39,10 @@ export function SiteFooter() {
         <div className="site-footer__brand-block">
           <img
             className="site-footer__logo"
-            src="/media/footer-logo.png"
+            src="/media/footer-logo.webp"
             alt={`${mosqueInfo.name} এর ফুটার লোগো`}
+            loading="lazy"
+            decoding="async"
           />
         </div>
 

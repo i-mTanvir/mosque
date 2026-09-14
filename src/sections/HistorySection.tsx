@@ -1,16 +1,16 @@
 const moments = [
   [
-    '/media/Hero Images/History/1.png',
+    '/media/Hero Images/History/1.webp',
     'প্রতিষ্ঠার সূচনা',
     'একটি ছোট স্বপ্ন থেকে আমাদের মসজিদের পথচলা শুরু হয়।',
   ],
   [
-    '/media/Hero Images/History/2.png',
+    '/media/Hero Images/History/2.webp',
     'ঐক্যের ঠিকানা',
     'মানুষের ইবাদত, শিক্ষা ও মিলনের জন্য মসজিদটি হয়ে ওঠে সবার আপন ঠিকানা।',
   ],
   [
-    '/media/Hero Images/History/3.png',
+    '/media/Hero Images/History/3.webp',
     'সেবার বিস্তার',
     'সময়ের সঙ্গে নামাজ, খুতবা ও সমাজসেবার পরিসর আরও বিস্তৃত হয়েছে।',
   ],
@@ -48,7 +48,7 @@ export function HistorySection() {
       <div className="history-moments">
         {moments.map(([image, title, text]) => (
           <article key={title}>
-            <img src={encodeURI(image)} alt={title} />
+            <img src={encodeURI(image)} alt={title} loading="lazy" decoding="async" />
             <div>
               <p>{title}</p>
               <span>{text}</span>

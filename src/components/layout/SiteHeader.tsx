@@ -16,7 +16,7 @@ export function SiteHeader() {
   return (
     <header className={`site-header${onArchive ? ' site-header--archive' : ''}`}>
       <a className="site-header__brand" href="#top" aria-label={`${mosqueInfo.name} এর হোম`}>
-        <img src="/media/logo.png" alt={`${mosqueInfo.name} এর লোগো`} />
+        <img src="/media/logo.webp" alt={`${mosqueInfo.name} এর লোগো`} fetchPriority="high" />
       </a>
 
       <nav

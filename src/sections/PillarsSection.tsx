@@ -17,8 +17,10 @@ export function PillarsSection() {
       <div className="pillars-section__image-wrap">
         <img
           className="pillars-section__image"
-          src="/media/seven.png"
+          src="/media/seven.webp"
           alt="ইসলামের পাঁচটি স্তম্ভের চিত্র"
+          loading="lazy"
+          decoding="async"
         />
       </div>
     </section>

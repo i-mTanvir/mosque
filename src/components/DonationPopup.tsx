@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const popupImage = encodeURI('/media/Donate for Mosque.png')
+const popupImage = encodeURI('/media/Donate for Mosque.webp')
 
 export function DonationPopup() {
   const [open, setOpen] = useState(false)
@@ -33,7 +33,7 @@ export function DonationPopup() {
           ×
         </button>
 
-        <img src={popupImage} alt="মসজিদের উন্নয়ন কাজ" />
+        <img src={popupImage} alt="মসজিদের উন্নয়ন কাজ" loading="lazy" decoding="async" />
 
         <div className="donation-popup__content">
           <p className="section-title__eyebrow">আপনার সহযোগিতা প্রয়োজন</p>

@@ -54,7 +54,12 @@ export function WelcomeSection() {
         <div className="welcome-section__points">
           <article className="welcome-point">
             <div className="welcome-point__icon">
-              <img src="/media/allah-icon.jpg" alt="আল্লাহর নামের প্রতীক" />
+              <img
+                src="/media/allah-icon.webp"
+                alt="আল্লাহর নামের প্রতীক"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div>
               <h3>আমাদের স্বপ্ন</h3>
@@ -68,7 +73,12 @@ export function WelcomeSection() {
 
           <article className="welcome-point">
             <div className="welcome-point__icon">
-              <img src="/media/quran-icon.jpg" alt="কুরআনের প্রতীক" />
+              <img
+                src="/media/quran-icon.webp"
+                alt="কুরআনের প্রতীক"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div>
               <h3>আমাদের লক্ষ্য</h3>
@@ -90,8 +100,10 @@ export function WelcomeSection() {
         >
           <img
             className="welcome-section__image"
-            src="/media/salat.png"
+            src="/media/salat.webp"
             alt="মসজিদে মুসল্লিদের নামাজ আদায়ের দৃশ্য"
+            loading="lazy"
+            decoding="async"
           />
           <span className="welcome-section__play-button" aria-hidden="true">
             <span className="welcome-section__play-rings" />
