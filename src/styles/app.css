@@ -731,7 +731,7 @@ main {
 .committee-section .section-title > p:last-child { color: #625a4f; }
 .committee-founder { max-width: 72rem; margin: 0 auto 2.5rem; display: grid; grid-template-columns: minmax(15rem, 26rem) 1fr; gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
 .committee-founder__portrait { background: transparent; }
-.committee-founder__portrait img { display:block; width:100%; height:auto; object-fit:contain; }
+.committee-founder__portrait img { display:block; width:100%; aspect-ratio:3/2; height:auto; object-fit:contain; }
 .committee-founder__copy { max-width: 38rem; }
 .committee-founder__copy h3, .committee-card h3 { margin: .25rem 0 .65rem; font-size: clamp(1.5rem, 3vw, 2.35rem); }
 .committee-founder__copy > p:last-child { color:#625a4f; line-height:1.9; font-size:1rem; }
@@ -987,6 +987,7 @@ main {
 .pillars-section__image {
   display: block;
   width: min(100%, 58rem);
+  aspect-ratio: 1600 / 816;
   height: auto;
 }
 

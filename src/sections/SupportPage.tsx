@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { SiteFooter } from '../components/layout/SiteFooter'
 import { SiteHeader } from '../components/layout/SiteHeader'
@@ -16,6 +16,16 @@ const Copy = ({ value }: { value: string }) => (
 
 export function SupportPage() {
   const [privateInfo, setPrivateInfo] = useState(false)
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const timer = setTimeout(() => {
+        const el = document.querySelector(window.location.hash)
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 100)
+      return () => clearTimeout(timer)
+    }
+  }, [])
 
   return (
     <div className="support-page">

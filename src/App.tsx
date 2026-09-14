@@ -20,16 +20,28 @@ function App() {
   if (window.location.pathname === '/support') return <SupportPage />
   useEffect(() => {
     const hash = window.location.hash
+    if (!hash) return
 
-    if (!hash) {
-      return
+    const scrollToTarget = () => {
+      const el = document.querySelector(hash)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
     }
 
-    const timer = window.setTimeout(() => {
-      document.querySelector(hash)?.scrollIntoView({ block: 'start' })
-    }, 500)
+    scrollToTarget()
+    const t1 = window.setTimeout(scrollToTarget, 100)
+    const t2 = window.setTimeout(scrollToTarget, 400)
+    const t3 = window.setTimeout(scrollToTarget, 1000)
 
-    return () => window.clearTimeout(timer)
+    window.addEventListener('load', scrollToTarget)
+
+    return () => {
+      window.clearTimeout(t1)
+      window.clearTimeout(t2)
+      window.clearTimeout(t3)
+      window.removeEventListener('load', scrollToTarget)
+    }
   }, [])
 
   return (

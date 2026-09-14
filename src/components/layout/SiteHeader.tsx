@@ -9,9 +9,44 @@ export function SiteHeader() {
       ? '/'
       : href === '#support'
         ? '/support'
-        : onInnerPage && href.startsWith('#')
-          ? `/${href}`
-          : href
+        : href === '#contact'
+          ? '#contact'
+          : onInnerPage && href.startsWith('#')
+            ? `/${href}`
+            : href
+
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href === '#contact') {
+      event.preventDefault()
+      const contactEl = document.getElementById('contact')
+      if (!contactEl) return
+
+      // Initial smooth scroll
+      contactEl.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      window.history.pushState(null, '', '#contact')
+
+      // Actively track target while scrolling so any late-loading lazy images
+      // won't strand the viewport before the footer
+      const startTime = Date.now()
+      const poller = setInterval(() => {
+        const el = document.getElementById('contact')
+        if (!el || Date.now() - startTime > 2000) {
+          clearInterval(poller)
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          return
+        }
+
+        const rect = el.getBoundingClientRect()
+        // If the footer is still below the visible viewport, continue guiding the scroll
+        if (rect.top > window.innerHeight) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        } else {
+          // Reached the footer
+          clearInterval(poller)
+        }
+      }, 100)
+    }
+  }
 
   return (
     <header className={`site-header${onArchive ? ' site-header--archive' : ''}`}>
@@ -36,6 +71,7 @@ export function SiteHeader() {
                     : ''
                 }
                 href={resolveHref(item.href)}
+                onClick={(e) => handleLinkClick(e, item.href)}
               >
                 {item.label}
               </a>
